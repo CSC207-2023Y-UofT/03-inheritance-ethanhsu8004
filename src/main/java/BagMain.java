@@ -15,16 +15,16 @@ class BagMain {
      * on new Bag types (and HandBag subclasses)!
      */
     public static void enhanceBags(Bag[] bags, boolean double_enhance_handbags) {
-        for (int i = 0; i < bags.length; i ++){
-            if (double_enhance_handbags && bags[i] instanceof HandBag){
+        for (int i = 0; i < bags.length; i ++) {
+            if (bags[i] instanceof HandBag && double_enhance_handbags) {
                 bags[i].enhance();
                 bags[i].enhance();
             }
             else{
                 bags[i].enhance();
             }
+            }
         }
-    }
 
     /**
      * TODO: Implement this method
