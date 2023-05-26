@@ -81,18 +81,27 @@ public abstract class Bag {
 
     public boolean addItem(String ItemBag){
         if (numberOfContents < capacity){
-            String [] NewArr = new String[capacity + 1];
-            for (int i = 0; i < numberOfContents; i ++){
-                NewArr[i] = contents[i];
-            }
-            NewArr[numberOfContents] = ItemBag;
-            contents = NewArr;
+            contents[numberOfContents] = ItemBag;
             numberOfContents ++;
             return true;
         }
         else{
             return false;
         }
+
+//        if (numberOfContents < capacity){
+//            String [] NewArr = new String[capacity + 1];
+//            for (int i = 0; i < numberOfContents; i ++){
+//                NewArr[i] = contents[i];
+//            }
+//            NewArr[numberOfContents] = ItemBag;
+//            contents = NewArr;
+//            numberOfContents ++;
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
 
     }
     /**
